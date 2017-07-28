@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_background" 
+        android:paddingTop="15dp"
+        >
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/back"
+             />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="设置"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <ImageView 
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            />
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/linearlayout_button"
+            android:id="@+id/about"
+            >
+            <TextView 
+                android:text="关于"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+            	android:layout_marginBottom="10dp"
+            	android:layout_gravity="center"
+            	android:layout_marginLeft="20dp"
+            	android:textSize="16sp"
+                />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/right"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/exit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/linearlayout_button"
+            android:orientation="horizontal" >
+            <TextView 
+                android:text="退出登录"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+            	android:layout_marginBottom="10dp"
+            	android:layout_gravity="center"
+            	android:textSize="16sp"
+            	android:gravity="center"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

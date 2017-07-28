@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/video_layout"
+            android:layout_width="match_parent"
+            android:layout_height="240dp" >
+
+            <LinearLayout
+                android:id="@+id/top_control"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="top"
+                android:layout_marginTop="15dp"
+                android:background="#00000000"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/back" />
+
+                <TextView
+                    android:id="@+id/class_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:maxWidth="100dp"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/video_view_control"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/start_play"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/start" />
+
+                <ImageView
+                    android:id="@+id/video_imageview"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/pictures_no1" />
+
+                <com.lesson.view.MyVideoView
+                    android:id="@+id/video_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <include layout="@layout/progress_layout" />
+
+            <LinearLayout
+                android:id="@+id/controller_bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/bottom_operate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:background="#101010"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/left_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/pause_img"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/pause_btn_style" />
+
+                        <TextView
+                            android:id="@+id/time_current_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="00:00:00"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/middle_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <SeekBar
+                            android:id="@+id/play_seekbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:maxHeight="4.0dip"
+                            android:minHeight="4.0dip"
+                            android:paddingLeft="16dip"
+                            android:paddingRight="16dip"
+                            android:progressDrawable="@drawable/po_seekbar"
+                            android:thumb="@drawable/seekbar_thumb" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/right_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@+id/middle_layout"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/time_total_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00:00:00"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/volume_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pause_btn_style"
+                            android:visibility="gone" />
+
+                        <SeekBar
+                            android:id="@+id/volume_seekbar"
+                            android:layout_width="100dp"
+                            android:layout_height="5dp"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progress="20"
+                            android:progressDrawable="@drawable/seekbar_style2"
+                            android:thumb="@null"
+                            android:visibility="gone" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#1e1e1e" />
+
+                        <ImageView
+                            android:id="@+id/screen_img"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/screen" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                >
+
+                <TextView
+                    android:id="@+id/test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="在线测试"
+                    android:textColor="@color/title_background"
+                    android:textSize="16sp" />
+
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+                
+                <ImageView 
+                    android:id="@+id/download_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/download"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    />
+                
+            </LinearLayout>
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/classes_line" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/course_introduction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="详情"
+                    android:textColor="@color/title_background"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/course_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="目录"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/course_comments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="评价"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/classes_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:id="@+id/course_inf_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <fragment
+                        android:id="@+id/course_inf1"
+                        android:name="com.lesson.fragment.CourseInfFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/classes_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:baselineAligned="@color/white"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/course_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="我来说两句"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/gray"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/login_button"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="5dp"
+                        android:text="立即报名"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

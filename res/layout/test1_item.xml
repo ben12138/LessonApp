@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="aaaa"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/choice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/choiceA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="aaaa"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/choiceB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="aaaa"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/choiceC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="aaaa"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/choiceD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="aaaa"
+                android:textSize="16sp" />
+        </RadioGroup>
+        <TextView 
+            android:id="@+id/answer_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="您的选择是:"
+            android:textSize="18sp"
+            />
+        <TextView 
+            android:id="@+id/correct_answer_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:text="正确答案："
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/classes_line" />
+
+</LinearLayout>

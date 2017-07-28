@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent = "true"
+    android:layout_marginTop="-50dp"
+    android:background="#00000000"
+    android:id="@+id/progress"
+    android:orientation="vertical"
+    android:visibility="gone"
+    >
+    
+    <ImageView 
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/operate_bg"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/volume"
+        />
+    <FrameLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:paddingBottom="25dp"
+        >
+        <TextView 
+            android:id="@+id/operate_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="0%"
+            android:textColor="#8a8a8a"
+            />
+    </FrameLayout>
+
+</LinearLayout>

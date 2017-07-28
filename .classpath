@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="lib" path="D:/Java Project/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="D:/Java Project/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="D:/Java Project/commons-codec-1.10-javadoc.jar"/>
+	<classpathentry kind="lib" path="D:/Java Project/commons-codec-1.10-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Java Project/commons-codec-1.10-tests.jar"/>
+	<classpathentry kind="lib" path="D:/Java Project/commons-codec-1.10-test-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Java Project/commons-collections-3.0.jar"/>
+	<classpathentry kind="lib" path="D:/Java Project/commons-lang-2.1.jar"/>
+	<classpathentry kind="lib" path="D:/Java Project/commons-logging.jar"/>
+	<classpathentry kind="lib" path="D:/Java Project/ezmorph-1.0.2.jar"/>
+	<classpathentry kind="lib" path="D:/Java Project/guava-18.0.jar"/>
+	<classpathentry kind="lib" path="D:/Java Project/json-lib-1.1-jdk13.jar"/>
+	<classpathentry kind="lib" path="D:/Java Project/mysql-connector-java-5.1.38-bin.jar"/>
+	<classpathentry kind="lib" path="D:/Java Project/xom-1.0d10.jar"/>
+	<classpathentry kind="lib" path="D:/AndroidProjectForEclipse/universal-image-loader-1.8.4.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

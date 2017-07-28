@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <ListView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/downloads"
+        android:layout_weight="1"
+        ></ListView>
+
+    <Button 
+        android:id="@+id/start_download"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="开始下载"
+        android:background="@drawable/login_button"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        />
+    
+</LinearLayout>

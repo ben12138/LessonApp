@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_background" 
+        android:paddingTop="15dp"
+        >
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/back"
+             />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="验证码检测"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <ImageView 
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/search"
+            />
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
+        
+        <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="已发送验证码到这个邮箱"
+	        android:textSize="16sp"
+	        android:gravity="center_horizontal"
+	        />
+        
+        <TextView
+            android:id="@+id/email"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="+86 180 0000 0000"
+	        android:textSize="16sp"
+	        android:layout_marginTop="15dp"
+	        android:gravity="center_horizontal"
+	        />
+    </LinearLayout>
+
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ced5d9"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+    
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        >
+        
+<!--         <EditText 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="+86"
+            android:textSize="16sp"
+            android:textColor="@color/_253_black"
+            android:gravity="center"
+            android:background="@drawable/_253_edit_bg"
+            android:enabled="false"
+            android:focusable="false"/> -->
+        
+        <EditText 
+            android:id="@+id/yanzhengma"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:text=""
+            android:textSize="16sp"
+            android:gravity="center"
+            android:inputType="text"
+            android:hint="请输入验证码"/>
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/check"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="校验验证码"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:background="@drawable/login_button"
+        android:textColor="@color/white_font"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+</LinearLayout>

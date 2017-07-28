@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:orientation="horizontal"
+        android:background="@color/title_background"
+        >
+        
+        <LinearLayout 
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/tuijian"
+            android:paddingTop="35dp"
+            >
+            
+            <TextView 
+                android:text="推荐"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/white_font"
+                android:id="@+id/tuijian_textview"
+                />
+            
+            <ImageView 
+                android:layout_height="2dp"
+                android:layout_width="fill_parent"
+                android:background="@color/white_font"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/tuijian_imageview"
+                />
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/classification"
+            android:paddingTop="35dp"
+            >
+            
+            <TextView 
+                android:text="分类"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/light_title_background"
+                android:id="@+id/classification_textview"
+                />
+            
+            <ImageView 
+                android:layout_height="2dp"
+                android:layout_width="fill_parent"
+                android:background="@color/title_background"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/classification_imageview"
+                />
+            
+        </LinearLayout>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+        
+        <ImageView 
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/search"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/search"
+            />
+        
+    </LinearLayout>
+    
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/up_fragment"
+        android:layout_weight="1"
+        >
+        <fragment 
+	        android:id="@+id/tuijian_fragment"
+	        android:name="com.lesson.fragment.TuiJianFragment"
+	        android:layout_weight="1"
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+	        />
+    </FrameLayout>
+    
+
+</LinearLayout>
